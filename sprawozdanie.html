@@ -1,0 +1,1608 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: medium !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+@import "";
+
+/* FONTS */
+
+/* VARIABLES */
+
+:root {
+  --theme-0: #fff;
+
+  /* Slate grayscale */
+  --theme-50: #f8fafc;
+  --theme-100: #f1f5f9;
+  --theme-200: #e2e8f0;
+  --theme-300: #cbd5e1;
+  --theme-400: #94a3b8;
+  --theme-500: #64748b;
+  --theme-600: #475569;
+  --theme-700: #334155;
+  --theme-800: #1e293b;
+  --theme-900: #0f172a;
+
+  /* Tailwind variables */
+  --tw-primary: #62bbf3;
+
+  --tw-prose-body: var(--theme-700);
+  --tw-prose-headings: var(--theme-900);
+  --tw-prose-lead: var(--theme-600);
+  --tw-prose-links: var(--theme-900);
+  --tw-prose-bold: var(--theme-900);
+  --tw-prose-counters: var(--theme-500);
+  --tw-prose-bullets: var(--theme-300);
+  --tw-prose-hr: var(--theme-200);
+  --tw-prose-quotes: var(--theme-900);
+  --tw-prose-quote-borders: var(--theme-200);
+  --tw-prose-captions: var(--theme-500);
+  --tw-prose-code: var(--theme-900);
+  --tw-prose-pre-code: var(--theme-100);
+  --tw-prose-pre-bg: var(--theme-800);
+  --tw-prose-th-borders: var(--theme-300);
+  --tw-prose-td-borders: var(--theme-200);
+  --tw-prose-bg: var(--theme-0);
+  --tw-prose-meta: var(--theme-500);
+  --tw-prose-meta-bg: var(--theme-100);
+
+  --tw-prose-invert-body: var(--theme-300);
+  --tw-prose-invert-headings: var(--theme-0);
+  --tw-prose-invert-lead: var(--theme-400);
+  --tw-prose-invert-links: var(--theme-0);
+  --tw-prose-invert-bold: var(--theme-0);
+  --tw-prose-invert-counters: var(--theme-400);
+  --tw-prose-invert-bullets: var(--theme-600);
+  --tw-prose-invert-hr: var(--theme-700);
+  --tw-prose-invert-quotes: var(--theme-100);
+  --tw-prose-invert-quote-borders: var(--theme-700);
+  --tw-prose-invert-captions: var(--theme-400);
+  --tw-prose-invert-code: var(--theme-0);
+  --tw-prose-invert-pre-bg: var(--theme-900);
+  --tw-prose-invert-th-borders: var(--theme-600);
+  --tw-prose-invert-td-borders: var(--theme-700);
+  --tw-prose-invert-bg: var(--theme-800);
+  --tw-prose-invert-meta: var(--theme-400);
+  --tw-prose-invert-meta-bg: var(--theme-700);
+
+  --tw-highlight-color: #fde047; /* yellow-300 */
+  --tw-drop-shadow-md: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  --tw-button-hover-bg: var(--theme-100);
+
+  --tw-button-hover-bg-inverted: var(--theme-700);
+
+  /* Typora variables */
+
+  --select-text-bg-color: #7dd3fc80; /* sky-300/50 */
+  --select-text-bg-color-dark: #0ea5e980; /* sky-500/50 */
+  --select-text-font-color: var(--theme-900);
+  --select-text-font-color-dark: var(--theme-50);
+
+  --background: var(--tw-prose-bg);
+  --bg-color: var(--tw-prose-bg);
+  --text-color: var(--tw-prose-body);
+  --primary-color: var(--tw-primary);
+  --md-char-color: var(--theme-400);
+  --meta-content-color: var(--theme-500);
+  --typora-source-body: var(--theme-800);
+  --heading-char-color: var(--md-char-color);
+  --mermaid-theme: neutral;
+  --active-toggle-btn-color: var(--theme-200);
+
+  --md-char-color-inverted: var(--theme-500);
+  --meta-content-color-inverted: var(--theme-400);
+  --typora-source-body-inverted: var(--theme-300);
+  --mermaid-theme-inverted: dark;
+  --active-toggle-btn-color-inverted: var(--theme-400);
+
+  /* Sidebar */
+  --side-bar-bg-color: var(--tw-prose-bg);
+  --active-file-bg-color: var(--theme-100);
+  --active-file-text-color: var(--tw-prose-bold);
+  --active-file-border-color: var(--theme-100);
+  --panel-border-color: var(--theme-300);
+  --blur-text-color: var(--theme-300);
+  --window-border: 1px solid var(--theme-200);
+  --item-hover-bg-color: var(--theme-100);
+  --search-hit-text-bg-color: var(--theme-200);
+  --search-hit-text-font-color: inherit;
+  --search-select-text-color: var(--select-text-font-color);
+  --search-select-bg-color: var(--select-text-bg-color);
+
+  --blur-text-color-inverted: var(--theme-500);
+  --panel-border-color-inverted: var(--theme-700);
+  --active-file-bg-color-inverted: var(--theme-700);
+  --window-border-inverted: 1px solid var(--theme-700);
+  --search-hit-text-bg-color-inverted: var(--theme-700);
+  --search-hit-text-font-color-inverted: var(--theme-0);
+  --search-select-bg-color-inverted: var(--theme-400);
+  --rawblock-edit-panel-bd: var(--tw-prose-pre-bg);
+  --item-hover-bg-color-inverted: var(--theme-700);
+
+  --monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  /* Custom */
+  --footnote: var(--tw-prose-body);
+  /* I'd love to use the --theme grayscale for --footnote-bg, but there's (currently)
+  no way to add an alpha-channel to a CSS variable (and we need the transparency
+  because otherwise the caret wil not be visible), so I here just used a hardcoded
+  copy of --theme-500 */
+  --footnote-bg: #94a3b855;
+  --button-bg: var(--theme-200);
+
+  --button-bg-inverted: var(--theme-600);
+
+  --md-grid-header: var(--theme-100);
+  --md-grid-header-ext: var(--theme-400);
+  --md-grid-ext: var(--theme-300);
+  --md-grid-header-active: var(--theme-500);
+  --md-grid-active: var(--theme-400);
+  --md-grid-border-color: var(--theme-500);
+
+  --md-grid-header-inverted: var(--theme-600);
+  --md-grid-header-ext-inverted: var(--theme-500);
+  --md-grid-ext-inverted: var(--theme-600);
+  --md-grid-header-active-inverted: var(--theme-400);
+  --md-grid-active-inverted: var(--theme-500);
+  --md-grid-border-color-inverted: var(--theme-200);
+
+  --code-blocks-font-size: 0.9em;
+  --inline-code-font-size: 0.9em;
+}
+
+.ty-file-search-match-text {
+  background-color: var(--search-hit-text-bg-color);
+}
+
+/* TAILWIND RESET */
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: currentColor;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: "";
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+*/
+
+#text {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+  tab-size: 4;
+  /* 3 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+#text {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--monospace);
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/* TAILWIND PROSE IMPLEMENTATION */
+
+#write {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.8;
+}
+
+html,
+body {
+  font-family: "Inter";
+}
+
+/* on Windows/Linux, it is the part that is not titlebar or status bar. */
+content,
+titlebar {
+  background: var(--tw-prose-bg);
+}
+
+#write {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: var(--tw-prose-body);
+  max-width: 60ch;
+}
+
+#write > :where(:first-child) {
+  margin-top: 0;
+}
+
+#write > :where(:last-child) {
+  margin-bottom: 0;
+}
+
+/**
+  * ---------------------
+  * Block Elements
+  */
+
+/* yaml */
+pre.md-meta-block {
+  color: var(--tw-prose-meta);
+  background-color: var(--tw-prose-meta-bg);
+  font-weight: 400;
+  font-size: var(--code-blocks-font-size);
+  line-height: 1.7777778;
+  border-radius: 0.5rem /* 8px */;
+  padding: 1.1111111em 1.3333333em;
+  margin-bottom: 2.8em;
+}
+
+/* headings */
+h1 {
+  color: var(--tw-prose-headings);
+  font-weight: 800;
+  font-size: 2.8em;
+  margin-top: 0;
+  margin-bottom: 0.8571429em;
+  line-height: 1;
+}
+
+h1 strong {
+  font-weight: 900;
+}
+
+h2 {
+  color: var(--tw-prose-headings);
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-top: 1.5555556em;
+  margin-bottom: 0.8888889em;
+  line-height: 1.1111111;
+}
+
+h2 strong {
+  font-weight: 800;
+}
+
+h3 {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6666667em;
+  line-height: 1.3333333;
+}
+
+h3 strong {
+  font-weight: 700;
+}
+
+h4 {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+
+h4 strong {
+  font-weight: 700;
+}
+
+h2 code {
+  font-size: 0.8611111em;
+}
+
+h3 code {
+  font-size: 0.9em;
+}
+
+h2 + * {
+  margin-top: 0;
+}
+
+h3 + * {
+  margin-top: 0;
+}
+
+h4 + * {
+  margin-top: 0;
+}
+
+/* table */
+
+table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+  line-height: 1.5555556;
+}
+
+/* table header */
+
+thead {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-th-borders);
+}
+
+thead th {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  vertical-align: bottom;
+  padding-right: 0.6666667em;
+  padding-bottom: 0.8888889em;
+  padding-left: 0.6666667em;
+}
+
+thead th:first-child {
+  padding-left: 0;
+}
+
+thead th:last-child {
+  padding-right: 0;
+}
+
+tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-td-borders);
+}
+
+tbody tr:last-child {
+  border-bottom-width: 0;
+}
+
+tbody td {
+  vertical-align: baseline;
+  padding-top: 0.8888889em;
+  padding-right: 0.6666667em;
+  padding-bottom: 0.8888889em;
+  padding-left: 0.6666667em;
+}
+
+tbody td:first-child {
+  padding-left: 0;
+}
+
+tbody td:last-child {
+  padding-right: 0;
+}
+
+.md-grid-board tr[row="1"] {
+  background-color: var(--md-grid-header);
+}
+
+.md-grid-board a:hover,
+.md-grid-board a.md-active {
+  background: var(--md-grid-active);
+}
+
+.md-grid-board tr[row="1"] a:hover,
+.md-grid-board tr[row="1"] a.md-active {
+  background: var(--md-grid-header-active);
+}
+
+.md-grid-board .md-grid-ext {
+  background: var(--md-grid-ext);
+}
+
+.md-grid-board tr[row="1"] .md-grid-ext {
+  background: var(--md-grid-header-ext);
+}
+
+.md-grid-board a {
+  border-color: var(--md-grid-border-color) !important;
+}
+
+/* lists */
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.6em;
+}
+
+li {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.6em;
+}
+
+#write ul.task-list {
+  padding-left: 0;
+}
+
+#write li.task-list-item {
+  padding-left: 0.4em;
+}
+
+#write input[type="checkbox"] {
+  margin-left: -1em;
+}
+
+input[checked] ~ * {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+ol > li::marker {
+  font-weight: 400;
+  color: var(--tw-prose-counters);
+}
+
+ul > li::marker {
+  color: var(--tw-prose-bullets);
+}
+
+ul > li,
+ol > li {
+  padding-left: 0.4em;
+}
+
+ul > li p,
+ol > li p {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+#write > ul > li > :not(input):first-child,
+#write > ol > li > :not(input):first-child,
+#write > ul > li > input + *,
+#write > ol > li > input + * {
+  margin-top: 1.2em;
+}
+
+#write > ul > li > *:last-child,
+#write > ol > li > *:last-child {
+  margin-bottom: 1.2em;
+}
+
+#write ul > li > p:only-child,
+#write ol > li > p:only-child,
+#write ul > li > input + p:last-child,
+#write ol > li > input + p:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* blockquote */
+blockquote {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--tw-prose-quotes);
+  border-left-width: 0.25rem;
+  border-left-color: var(--tw-prose-quote-borders);
+  quotes: "\201C""\201D""\2018""\2019";
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  padding-left: 1.0666667em;
+}
+
+blockquote strong {
+  font-weight: 700;
+}
+
+blockquote p:first-of-type::before {
+  content: open-quote;
+}
+
+blockquote p:last-of-type::after {
+  content: close-quote;
+}
+
+/* hr */
+hr {
+  border-color: var(--tw-prose-hr);
+  border-top-width: 1px;
+}
+
+[mdtype="hr"] {
+  margin-top: 2.8em;
+  margin-bottom: 2.8em;
+}
+
+p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+/* diagram panel */
+.md-diagram-panel {
+  color: var(--tw-prose-body);
+}
+
+.enable-diagrams .md-diagram .code-tooltip {
+  bottom: -1.9em;
+  right: 0;
+}
+
+.md-fences-adv-panel {
+  margin-top: 1.3em;
+}
+
+/* footnote definition */
+sup.md-footnote {
+  color: var(--footnote);
+  background-color: var(--footnote-bg);
+}
+
+.footnotes {
+  font-size: 0.85em;
+}
+
+.md-reverse-footnote-area a {
+  font-family: "Inter";
+  text-decoration: none;
+  color: var(--tw-primary);
+  border-radius: 3px;
+}
+
+.md-hover-tip .code-tooltip-content {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding: 0.8em 1.2em;
+}
+
+.md-reverse-footnote-area a:hover {
+  background-color: var(--item-hover-bg-color);
+}
+
+.md-def-name:before {
+  color: var(--md-char-color);
+}
+
+.md-rawblock.md-rawblock-on-edit,
+.md-rawblock:hover {
+  color: var(--tw-prose-pre-code);
+}
+
+.md-inline-math script {
+  color: var(--tw-prose-code);
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: var(--tw-highlight-color) !important;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: #000 !important;
+  stroke: #000 !important;
+}
+
+.code-tooltip {
+  color: var(--tw-prose-pre-code);
+}
+
+.code-tooltip .md-mathjax-preview {
+  color: var(--tw-prose-body);
+}
+
+.md-htmlblock-container,
+.md-rawblock-input.md-rawblock-control,
+.md-htmlblock-panel.md-rawblock-control,
+.md-math-container {
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.md-rawblock-input {
+  font-size: var(--code-blocks-font-size);
+  padding: 0 1.3333333em;
+}
+
+.md-mathblock-panel .md-rawblock-input.md-rawblock-control {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 0;
+}
+
+.md-mathblock-panel .md-rawblock-before {
+  padding-top: 1.1em;
+  border-top-left-radius: 0.5rem;
+}
+
+.md-mathblock-panel .md-rawblock-after {
+  padding-bottom: 1.1em;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.md-htmlblock-panel .md-rawblock-input {
+  padding-top: 1.1111111em;
+  padding-bottom: 1.1111111em;
+}
+
+.md-mathblock-panel .md-rawblock-before,
+.md-mathblock-panel .md-rawblock-after {
+  font-size: var(--code-blocks-font-size);
+  padding-left: calc(4px + 1.3333333em);
+  color: var(--code-bracket);
+}
+
+.md-rawblock-tooltip {
+  color: var(--tw-prose-pre-code);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.md-rawblock-tooltip-name {
+  opacity: 1;
+}
+
+.md-comment {
+  font-size: var(--inline-code-font-size);
+  color: var(--code-comment);
+}
+
+.md-raw-inline,
+.md-tag,
+[md-inline="linebreak"],
+.md-image > .md-meta,
+.md-inline-math.md-expand > .md-inline-math-container {
+  font-size: var(--code-blocks-font-size);
+}
+
+/**
+  * Code Fences
+  * see http://support.typora.io/Code-Block-Styles
+  */
+
+.md-fences {
+  color: var(--tw-prose-pre-code);
+  background-color: var(--tw-prose-pre-bg);
+  font-weight: 400;
+  font-size: var(--code-blocks-font-size);
+  line-height: 1.7777778;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius: 0.5rem /* 8px */;
+  padding: 1.1111111em 1.3333333em;
+}
+
+.md-fences.md-focus {
+  border-bottom-right-radius: 0;
+}
+
+.md-fences > .code-tooltip {
+  height: 1.8rem;
+  bottom: -1.8rem;
+  font-size: 0.9rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.code-tooltip .ty-input {
+  min-width: 10rem;
+}
+
+pre code {
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+pre code::before {
+  content: none;
+}
+
+pre code::after {
+  content: none;
+}
+
+/* SYNTAX HIGHLIGHTING */
+
+:root {
+  --code-neutral: var(--theme-800);
+  --code-cursor: var(--theme-900);
+  --code-string: rgb(14, 165, 233); /* sky-500 */
+  --code-number: rgb(245, 158, 11); /* amber-500 */
+  --code-tag: rgb(236, 72, 153); /* pink-500 */
+  --code-variable: var(--theme-700);
+  --code-operator: var(--theme-600);
+  --code-comment: var(--theme-500);
+  --code-bracket: var(--theme-500);
+  --code-citation: var(--theme-500);
+
+  --code-neutral-inverted: var(--theme-100);
+  --code-cursor-inverted: var(--theme-50);
+  --code-string-inverted: #7dd4fc; /* sky-300 */
+  --code-number-inverted: #fde68a; /* amber-100 */
+  --code-tag-inverted: #f472b5; /* pink-400 */
+  --code-variable-inverted: var(--theme-200);
+  --code-operator-inverted: var(--theme-400);
+  --code-comment-inverted: var(--theme-400);
+  --code-bracket-inverted: var(--theme-500);
+  --code-citation-inverted: var(--theme-400);
+}
+
+#write .cm-s-inner {
+  --code-neutral: var(--code-neutral-inverted);
+  --code-cursor: var(--code-cursor-inverted);
+  --code-string: var(--code-string-inverted);
+  --code-number: var(--code-number-inverted);
+  --code-tag: var(--code-tag-inverted);
+  --code-variable: var(--code-variable-inverted);
+  --code-operator: var(--code-operator-inverted);
+  --code-comment: var(--code-comment-inverted);
+  --code-bracket: var(--code-bracket-inverted);
+  --code-citation: var(--code-citation-inverted);
+}
+
+.CodeMirror-selectedtext {
+  background-color: transparent;
+}
+.CodeMirror-cursor {
+  border-left: 1px solid var(--code-cursor) !important;
+}
+.CodeMirror-gutters {
+  border-color: var(--code-comment);
+}
+.cm-s-inner span.cm-string {
+  color: var(--code-string);
+}
+
+.cm-s-inner span.cm-number {
+  color: var(--code-number);
+}
+
+.cm-s-inner span.cm-tag,
+.cm-s-inner span.cm-keyword,
+.cm-s-inner span.cm-qualifier {
+  color: var(--code-tag);
+}
+
+.cm-s-inner .CodeMirror-guttermarker,
+.cm-s-inner .CodeMirror-guttermarker-subtle,
+.cm-s-inner span.cm-comment.cm-def,
+.cm-s-inner span.cm-comment.cm-type,
+.cm-s-inner span.cm-builtin,
+.cm-s-inner span.cm-type,
+.cm-s-inner span.cm-header,
+.cm-s-inner span.cm-link,
+.cm-s-inner span.cm-error {
+  background: transparent;
+  color: var(--code-neutral);
+}
+
+.cm-s-inner span.cm-attribute,
+.cm-s-inner span.cm-property,
+.cm-s-inner span.cm-variable,
+.cm-s-inner span.cm-variable-2,
+.cm-s-inner span.cm-variable-3,
+.cm-s-inner span.cm-type,
+.cm-s-inner span.cm-atom,
+.cm-s-inner span.cm-def {
+  color: var(--code-variable);
+}
+.cm-s-inner span.cm-comment,
+.cm-s-inner .CodeMirror-linenumber {
+  color: var(--code-comment);
+}
+.cm-s-inner span.cm-operator {
+  color: var(--code-operator);
+}
+.cm-s-inner span.cm-bracket,
+.cm-s-inner span.cm-tag.cm-bracket,
+.cm-s-inner span.cm-meta {
+  color: var(--code-bracket);
+}
+
+.cm-s-inner span.cm-link {
+  text-decoration: underline;
+}
+
+/**
+  * Inline Elements
+  */
+
+/* basic styles */
+
+code {
+  color: var(--tw-prose-code);
+  font-weight: 600;
+  font-size: var(--inline-code-font-size);
+}
+
+code::before {
+  content: "`";
+}
+
+code::after {
+  content: "`";
+}
+
+[md-inline="code"].md-expand > code::before,
+[md-inline="code"].md-expand > code::after {
+  content: "";
+}
+
+a code {
+  color: var(--tw-prose-links);
+}
+
+strong {
+  color: var(--tw-prose-bold);
+  font-weight: 600;
+}
+
+a {
+  color: var(--tw-prose-links);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* A block-level image should have a total top and bottom margin of 2em.
+It is always wrapped in a paragraph with 1.2em vertical margin, hence we
+add 0.8 here */
+p > .md-image:only-child {
+  margin-top: 0.8em !important;
+  margin-bottom: 0.8em !important;
+}
+
+.md-image > .md-meta {
+  color: var(--tw-prose-code);
+}
+
+/* extend styles */
+
+mark {
+  border-radius: 3px;
+  padding: 0 2px;
+  background-color: var(--tw-highlight-color);
+}
+
+/**
+  * Source Code Mode
+  * see http://support.typora.io/Code-Block-Styles
+  */
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+  background-color: var(--item-hover-bg-color);
+}
+
+#typora-source {
+  font-family: var(--monospace);
+  color: var(--typora-source-body);
+}
+
+#typora-source .cm-header {
+  color: var(--code-tag);
+}
+
+#typora-source .cm-link {
+  color: var(--code-string);
+}
+
+#typora-source .cm-string {
+  color: var(--code-string);
+}
+
+#typora-source .cm-comment {
+  color: var(--code-comment);
+}
+
+#typora-source .cm-atom {
+  color: var(--code-citation);
+}
+
+#typora-source .cm-tag {
+  color: var(--code-tag);
+}
+
+#typora-source .cm-attribute {
+  color: var(--code-variable);
+}
+
+#typora-source .cm-bracket {
+  color: var(--code-bracket);
+}
+
+.file-list-item-file-ext-part {
+  opacity: 0.5;
+}
+
+#write div.md-toc-tooltip {
+  background-color: var(--tw-prose-bg);
+}
+
+.md-toc {
+  font-size: 0.8em;
+}
+
+.md-toc-h1 .md-toc-inner {
+  margin-left: 0;
+}
+
+.md-toc-h2 .md-toc-inner {
+  margin-left: 1em;
+}
+
+.md-toc-h3 .md-toc-inner {
+  margin-left: 2em;
+}
+
+.md-toc-h4 .md-toc-inner {
+  margin-left: 3em;
+}
+
+.md-toc-h5 .md-toc-inner {
+  margin-left: 4em;
+}
+
+.md-toc-h6 .md-toc-inner {
+  margin-left: 5em;
+}
+
+#typora-sidebar {
+  border-right: var(--window-border);
+}
+
+.sidebar-tab {
+  text-transform: none;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.md-search-hit {
+  color: var(--search-hit-text-font-color);
+  background-color: var(--search-hit-text-bg-color);
+}
+
+#md-searchpanel {
+  box-shadow: none;
+  filter: var(--tw-drop-shadow-md);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-color: var(--tw-button-hover-bg);
+}
+
+#md-searchpanel input,
+#md-searchpanel .btn,
+#searchpanel-msg {
+  border-radius: 5px;
+}
+
+#searchpanel-msg {
+  color: var(--theme-500);
+  border-color: var(--theme-300);
+  background: var(--theme-100);
+}
+
+.form-control {
+  border-color: var(--panel-border-color);
+}
+
+.btn-default {
+  background-color: var(--button-bg);
+}
+
+@import "";
+@import "";
+
+:root {
+  --tw-prose-body: var(--tw-prose-invert-body);
+  --tw-prose-headings: var(--tw-prose-invert-headings);
+  --tw-prose-lead: var(--tw-prose-invert-lead);
+  --tw-prose-links: var(--tw-prose-invert-links);
+  --tw-prose-bold: var(--tw-prose-invert-bold);
+  --tw-prose-counters: var(--tw-prose-invert-counters);
+  --tw-prose-bullets: var(--tw-prose-invert-bullets);
+  --tw-prose-hr: var(--tw-prose-invert-hr);
+  --tw-prose-quotes: var(--tw-prose-invert-quotes);
+  --tw-prose-quote-borders: var(--tw-prose-invert-quote-borders);
+  --tw-prose-code: var(--tw-prose-invert-code);
+  --tw-prose-captions: var(--tw-prose-invert-captions);
+  --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
+  --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
+  --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
+  --tw-prose-bg: var(--tw-prose-invert-bg);
+  --tw-prose-meta: var(--tw-prose-invert-meta);
+  --tw-prose-meta-bg: var(--tw-prose-invert-meta-bg);
+
+  --tw-button-hover-bg: var(--tw-button-hover-bg-inverted);
+
+  --select-text-bg-color: var(--select-text-bg-color-dark);
+  --select-text-font-color: var(--select-text-font-color-dark);
+
+  --md-char-color: var(--md-char-color-inverted);
+  --meta-content-color: var(--meta-content-color-inverted);
+  --panel-border-color: var(--panel-border-color-inverted);
+  --active-file-bg-color: var(--active-file-bg-color-inverted);
+  --window-border: var(--window-border-inverted);
+  --search-hit-text-bg-color: var(--search-hit-text-bg-color-inverted);
+  --search-hit-text-font-color: var(--search-hit-text-font-color-inverted);
+  --search-select-bg-color: var(--search-select-bg-color-inverted);
+  --blur-text-color: var(--blur-text-color-inverted);
+  --item-hover-bg-color: var(--item-hover-bg-color-inverted);
+  --typora-source-body: var(--typora-source-body-inverted);
+  --mermaid-theme: var(--mermaid-theme-inverted);
+  --active-toggle-btn-color: var(--active-toggle-btn-color-inverted);
+
+  --code-neutral: var(--code-neutral-inverted);
+  --code-cursor: var(--code-cursor-inverted);
+  --code-string: var(--code-string-inverted);
+  --code-number: var(--code-number-inverted);
+  --code-tag: var(--code-tag-inverted);
+  --code-variable: var(--code-variable-inverted);
+  --code-operator: var(--code-operator-inverted);
+  --code-comment: var(--code-comment-inverted);
+  --code-bracket: var(--code-bracket-inverted);
+  --code-citation: var(--code-citation-inverted);
+
+  --button-bg: var(--button-bg-inverted);
+
+  --md-grid-header: var(--md-grid-header-inverted);
+  --md-grid-header-ext: var(--md-grid-header-ext-inverted);
+  --md-grid-ext: var(--md-grid-ext-inverted);
+  --md-grid-header-active: var(--md-grid-header-active-inverted);
+  --md-grid-active: var(--md-grid-active-inverted);
+  --md-grid-border-color: var(--md-grid-border-color-inverted);
+}
+
+#write {
+    max-width: 100ch;
+}
+
+body {
+    font-family: Inter, Arial, "Noto Sans", sans-serif;
+}
+
+img {
+    width: 800px;
+    margin: 0px;
+}
+
+p .md-image:only-child, p > img:only-child {
+    width: 800px;
+    text-align: left;
+    margin: 0px;
+}
+
+
+p > .md-image:only-child:not(.md-img-error) img {
+    display: inline-block;
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>sprawozdanie</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='symulacja-wędrówki-losowej'><span>Symulacja wędrówki losowej</span></h1><p><strong><span>REDACTED</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n1743"><a class="md-toc-inner" href="#symulacja-wędrówki-losowej">Symulacja wędrówki losowej</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1747"><a class="md-toc-inner" href="#zasymulować-wędrówkę-losową-dla-różnych-wartości-p-oraz-liczby-kroków-n">Zasymulować wędrówkę losową dla różnych wartości p oraz liczby kroków N.</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1748"><a class="md-toc-inner" href="#instalacja-i-uruchomienie">Instalacja i uruchomienie</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1753"><a class="md-toc-inner" href="#krótki-opis-działania">Krótki opis działania</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1793"><a class="md-toc-inner" href="#zbadać-i-przedstawić-wyniki">Zbadać i przedstawić wyniki:</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1794"><a class="md-toc-inner" href="#wyniki-zbiorcze">Wyniki zbiorcze</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2255"><a class="md-toc-inner" href="#wyniki-poszczególnych-symulacji">Wyniki poszczególnych symulacji</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2364"><a class="md-toc-inner" href="#przedstawić-wyniki-na-wykresach">Przedstawić wyniki na wykresach:</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2256"><a class="md-toc-inner" href="#średnia-pozycja-cząsteczki-po-k-krokach-z-uwzględnieniem-95-przedziału-ufności">Średnia pozycja cząsteczki po K krokach z uwzględnieniem 95% przedziału ufności</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2257"><a class="md-toc-inner" href="#przykładowe-wykresy">Przykładowe wykresy:</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2305"><a class="md-toc-inner" href="#histogram-pozycji-końcowych-dla-różnych-wartości-p">Histogram pozycji końcowych dla różnych wartości p.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2267"><a class="md-toc-inner" href="#przykładowe-wykresy-2">Przykładowe wykresy:</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2309"><a class="md-toc-inner" href="#przykładowe-trajektorie-wędrówki">Przykładowe trajektorie wędrówki.</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2281"><a class="md-toc-inner" href="#przykładowe-wykresy-po-10-losowych-dla-każdej-wartości-p-oraz-n-na-wykresie-zbiorczym-oraz-indywidualnym">Przykładowe wykresy (po 10 losowych dla każdej wartości p oraz N na wykresie zbiorczym, oraz indywidualnym):</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n2314"><a class="md-toc-inner" href="#skomentować-wpływ-parametrów-p-oraz-n">Skomentować wpływ parametrów p oraz N:</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2298"><a class="md-toc-inner" href="#jak-zmienia-się-średnia-pozycja-oraz-rozkład-pozycji-końcowych-dla-różnych-wartości-p">Jak zmienia się średnia pozycja oraz rozkład pozycji końcowych dla różnych wartości p?</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n2321"><a class="md-toc-inner" href="#jak-liczba-kroków-n-wpływa-na-rozrzut-wyników-rozpiętość-końcowych-pozycji">Jak liczba kroków N wpływa na rozrzut wyników (rozpiętość końcowych pozycji)?</a></span></p></div><h2 id='zasymulować-wędrówkę-losową-dla-różnych-wartości-p-oraz-liczby-kroków-n'><span>Zasymulować wędrówkę losową dla różnych wartości p oraz liczby kroków N.</span></h2><h3 id='instalacja-i-uruchomienie'><span>Instalacja i uruchomienie</span></h3><p><span>Symulacja oraz tworzenie wykresów zostały zaimplementowane w pliku </span><code>main.py</code><span>. W celu uruchomienia symulacji należy wykonać poniższe polecenie:</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11.636363px; left: 32.627808px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28.991455px; width: 29px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28.991455px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 20px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pip install <span class="cm-attribute">-r</span> requirements.txt &amp;&amp; python main.py</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 27px;"></div><div class="CodeMirror-gutters" style="height: 27px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 28px;"></div></div></div></div></pre><p><span>Lub używając venv:</span></p><pre class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" spellcheck="false" lang="bash"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11.409119px; left: 32.627808px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28.991455px; width: 29px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28.991455px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 20px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">python3 <span class="cm-attribute">-m</span> venv .venv &amp;&amp; <span class="cm-builtin">source</span> .venv/bin/activate &amp;&amp; pip install <span class="cm-attribute">-r</span> requirements.txt &amp;&amp; python main.py</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 55px;"></div><div class="CodeMirror-gutters" style="height: 55px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 28px;"></div></div></div></div></pre><h3 id='krótki-opis-działania'><span>Krótki opis działania</span></h3><p><span>Program przeprowadza eksperymenty dla wszystkich kombinacji następujących parametrów:</span></p><figure class='table-figure'><table><thead><tr><th><span>Parametr</span></th><th><span>Symbol</span></th><th><span>Jednostka</span></th><th><span>Możliwe wartości</span></th></tr></thead><tbody><tr><td><span>Liczba symulacji na experyment</span></td><td><span>M</span></td><td><span>liczba</span></td><td><span>1000</span></td></tr><tr><td><span>Prawdopodobieństwo ruchu cząsteczki w górę</span></td><td><span>p</span></td><td><span>%</span></td><td><span>[50%, 55%, 60%, ..., 90%, 95%]</span></td></tr><tr><td><span>Liczba kroków w symulacji</span></td><td><span>N</span></td><td><span>Liczba</span></td><td><span>[100, 200, 300, 400, 500]</span></td></tr></tbody></table></figure><p><span>[[ x ]] podstawione zmienne z tabeli powyżej</span></p><p><span>Dla każdego eksperymentu zapisuje :</span></p><ul><li><p><a href='#wyniki-poszczególnych-symulacji'><span>surowe wyniki</span></a><span> dla danej każdej z 1000 symulacji z danego eksperymentu</span>
+<span>Lokalizacja: </span><code>rawdata/results_[[ p ]]_[[ N ]].csv</code></p></li></ul><ul><li><p><span>wiersz do tabeli </span><a href='#wyniki-zbiorcze'><span>&quot;wyniki zbiorcze&quot;</span></a><span> dotyczący wskaźników pozycji końcowej cząsteczki</span>
+<span>Lokalizacja: </span><code>cumulative_results.csv</code></p></li><li><p><a href='#średnia-pozycja-cząsteczki-po-n-krokach-z-uwzględnieniem-95%-przedziału-ufności'><span>Wykreś średniej pozycji po N krokach + 95% przedział ufności</span></a><span> </span>
+<span>Lokalizacja: </span><code>charts/mean/mean_95_percent_confidence_interval_[[ p ]]_[[ N ]].png</code></p></li><li><p><a href='#histogram-pozycji-końcowych-dla-różnych-wartości-p'><span>Histogram pozycji końcowych</span></a>
+<span>Lokalizacja: </span><code>charts/histograms/histogram_[[ p ]]_[[ N ]].png</code></p></li><li><p><a href='#przykładowe-trajektorie-wędrówki'><span>Wykres zbiorczy 10 losowych przykładowych trajektorii wędrówki</span></a>
+<span>Lokalizacja: </span><code>charts/trajectories/trajectories_summary_[[ p ]]_[[ N ]].png</code></p></li><li><p><a href='#przykładowe-trajektorie-wędrówki'><span>Wykres 10 pojedynczych losowych przykładowych trajektorii wędrówki</span></a>
+<span>Lokalizacja: </span><code>charts/trajectories/trajectories_random_[[ p ]]_[[ N ]].png</code></p></li><li><p><a href='#jak-zmienia-się-średnia-pozycja-oraz-rozkład-pozycji-końcowych-dla-różnych-wartości-p'><span>Punkt na wykresie zależności rozpiętości pozycji końcowych ze względu na </span><code>p</code></a>
+<span>Lokalizacja: </span><code>charts/max_minus_min_by_probability.png</code></p></li><li><p><a href='#jak-zmienia-się-średnia-pozycja-oraz-rozkład-pozycji-końcowych-dla-różnych-wartości-p'><span>Punkt na wykresie zależności średnich pozycji końcowych ze względu na </span><code>p</code></a>
+<span>Lokalizacja: </span><code>charts/mean_final_position_by_probability.png</code></p></li><li><p><a href='#jak-liczba-kroków-n-wpływa-na-rozrzut-wyników-rozpiętość-końcowych-pozycji'><span>Punkt na wykresie zależności rozpiętości pozycji końcowych ze względu na </span><code>N</code></a>
+<span>Lokalizacja: </span><code>charts/max_minus_min_by_number_of_steps.png</code></p></li><li><p><a href='#jak-liczba-kroków-n-wpływa-na-rozrzut-wyników-rozpiętość-końcowych-pozycji'><span>Punkt na wykresie zależności średnich pozycji końcowych ze względu na </span><code>N</code></a>
+<span>Lokalizacja: </span><code>charts/mean_final_position_by_number_of_steps.png</code></p></li></ul><h2 id='zbadać-i-przedstawić-wyniki'><span>Zbadać i przedstawić wyniki:</span></h2><h3 id='wyniki-zbiorcze'><span>Wyniki zbiorcze</span></h3><figure class='table-figure'><table><thead><tr><th style='text-align:left;' ><span>probability</span></th><th style='text-align:left;' ><span>number</span><span>_</span><span>of</span><span>_</span><span>steps</span></th><th style='text-align:left;' ><span>mean</span></th><th style='text-align:left;' ><span>std</span></th><th style='text-align:left;' ><span>min</span></th><th style='text-align:left;' ><span>max</span></th><th style='text-align:left;' ><span>max</span><span>_</span><span>minus</span><span>_</span><span>min</span></th><th style='text-align:left;' ><span>median</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>-0.034</span></td><td style='text-align:left;' ><span>9.568847579515518</span></td><td style='text-align:left;' ><span>-28</span></td><td style='text-align:left;' ><span>32</span></td><td style='text-align:left;' ><span>60</span></td><td style='text-align:left;' ><span>0.0</span></td></tr><tr><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>0.048</span></td><td style='text-align:left;' ><span>14.444850154986034</span></td><td style='text-align:left;' ><span>-50</span></td><td style='text-align:left;' ><span>42</span></td><td style='text-align:left;' ><span>92</span></td><td style='text-align:left;' ><span>0.0</span></td></tr><tr><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>-0.534</span></td><td style='text-align:left;' ><span>18.061197191769985</span></td><td style='text-align:left;' ><span>-70</span></td><td style='text-align:left;' ><span>52</span></td><td style='text-align:left;' ><span>122</span></td><td style='text-align:left;' ><span>0.0</span></td></tr><tr><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>0.908</span></td><td style='text-align:left;' ><span>19.671693775575097</span></td><td style='text-align:left;' ><span>-72</span></td><td style='text-align:left;' ><span>54</span></td><td style='text-align:left;' ><span>126</span></td><td style='text-align:left;' ><span>0.0</span></td></tr><tr><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>-1.222</span></td><td style='text-align:left;' ><span>22.366911185946083</span></td><td style='text-align:left;' ><span>-64</span></td><td style='text-align:left;' ><span>68</span></td><td style='text-align:left;' ><span>132</span></td><td style='text-align:left;' ><span>-2.0</span></td></tr><tr><td style='text-align:left;' ><span>55</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>10.29</span></td><td style='text-align:left;' ><span>9.70195341155584</span></td><td style='text-align:left;' ><span>-22</span></td><td style='text-align:left;' ><span>48</span></td><td style='text-align:left;' ><span>70</span></td><td style='text-align:left;' ><span>10.0</span></td></tr><tr><td style='text-align:left;' ><span>55</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>20.4</span></td><td style='text-align:left;' ><span>14.154575232058361</span></td><td style='text-align:left;' ><span>-28</span></td><td style='text-align:left;' ><span>62</span></td><td style='text-align:left;' ><span>90</span></td><td style='text-align:left;' ><span>20.0</span></td></tr><tr><td style='text-align:left;' ><span>55</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>30.64</span></td><td style='text-align:left;' ><span>17.088428833570394</span></td><td style='text-align:left;' ><span>-18</span></td><td style='text-align:left;' ><span>80</span></td><td style='text-align:left;' ><span>98</span></td><td style='text-align:left;' ><span>30.0</span></td></tr><tr><td style='text-align:left;' ><span>55</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>40.296</span></td><td style='text-align:left;' ><span>19.59796887435022</span></td><td style='text-align:left;' ><span>-22</span></td><td style='text-align:left;' ><span>106</span></td><td style='text-align:left;' ><span>128</span></td><td style='text-align:left;' ><span>40.0</span></td></tr><tr><td style='text-align:left;' ><span>55</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>51.692</span></td><td style='text-align:left;' ><span>21.958167865284206</span></td><td style='text-align:left;' ><span>-16</span></td><td style='text-align:left;' ><span>114</span></td><td style='text-align:left;' ><span>130</span></td><td style='text-align:left;' ><span>52.0</span></td></tr><tr><td style='text-align:left;' ><span>60</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>20.46</span></td><td style='text-align:left;' ><span>9.79614209778523</span></td><td style='text-align:left;' ><span>-10</span></td><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>60</span></td><td style='text-align:left;' ><span>20.0</span></td></tr><tr><td style='text-align:left;' ><span>60</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>39.802</span></td><td style='text-align:left;' ><span>13.962120039592842</span></td><td style='text-align:left;' ><span>-4</span></td><td style='text-align:left;' ><span>90</span></td><td style='text-align:left;' ><span>94</span></td><td style='text-align:left;' ><span>40.0</span></td></tr><tr><td style='text-align:left;' ><span>60</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>59.224</span></td><td style='text-align:left;' ><span>16.981573072009553</span></td><td style='text-align:left;' ><span>-6</span></td><td style='text-align:left;' ><span>112</span></td><td style='text-align:left;' ><span>118</span></td><td style='text-align:left;' ><span>60.0</span></td></tr><tr><td style='text-align:left;' ><span>60</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>80.44</span></td><td style='text-align:left;' ><span>19.642566023816745</span></td><td style='text-align:left;' ><span>18</span></td><td style='text-align:left;' ><span>136</span></td><td style='text-align:left;' ><span>118</span></td><td style='text-align:left;' ><span>80.0</span></td></tr><tr><td style='text-align:left;' ><span>60</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>99.988</span></td><td style='text-align:left;' ><span>21.56515374394535</span></td><td style='text-align:left;' ><span>36</span></td><td style='text-align:left;' ><span>170</span></td><td style='text-align:left;' ><span>134</span></td><td style='text-align:left;' ><span>100.0</span></td></tr><tr><td style='text-align:left;' ><span>65</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>29.872</span></td><td style='text-align:left;' ><span>9.624116375023736</span></td><td style='text-align:left;' ><span>0</span></td><td style='text-align:left;' ><span>58</span></td><td style='text-align:left;' ><span>58</span></td><td style='text-align:left;' ><span>30.0</span></td></tr><tr><td style='text-align:left;' ><span>65</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>59.628</span></td><td style='text-align:left;' ><span>13.107464133080814</span></td><td style='text-align:left;' ><span>16</span></td><td style='text-align:left;' ><span>98</span></td><td style='text-align:left;' ><span>82</span></td><td style='text-align:left;' ><span>60.0</span></td></tr><tr><td style='text-align:left;' ><span>65</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>90.752</span></td><td style='text-align:left;' ><span>16.36393889013278</span></td><td style='text-align:left;' ><span>24</span></td><td style='text-align:left;' ><span>140</span></td><td style='text-align:left;' ><span>116</span></td><td style='text-align:left;' ><span>90.0</span></td></tr><tr><td style='text-align:left;' ><span>65</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>119.72</span></td><td style='text-align:left;' ><span>19.607590366998185</span></td><td style='text-align:left;' ><span>46</span></td><td style='text-align:left;' ><span>178</span></td><td style='text-align:left;' ><span>132</span></td><td style='text-align:left;' ><span>120.0</span></td></tr><tr><td style='text-align:left;' ><span>65</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>149.89</span></td><td style='text-align:left;' ><span>20.719650093570596</span></td><td style='text-align:left;' ><span>62</span></td><td style='text-align:left;' ><span>216</span></td><td style='text-align:left;' ><span>154</span></td><td style='text-align:left;' ><span>150.0</span></td></tr><tr><td style='text-align:left;' ><span>70</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>40.422</span></td><td style='text-align:left;' ><span>8.897747804922322</span></td><td style='text-align:left;' ><span>10</span></td><td style='text-align:left;' ><span>66</span></td><td style='text-align:left;' ><span>56</span></td><td style='text-align:left;' ><span>40.0</span></td></tr><tr><td style='text-align:left;' ><span>70</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>79.426</span></td><td style='text-align:left;' ><span>12.76724418188984</span></td><td style='text-align:left;' ><span>32</span></td><td style='text-align:left;' ><span>122</span></td><td style='text-align:left;' ><span>90</span></td><td style='text-align:left;' ><span>80.0</span></td></tr><tr><td style='text-align:left;' ><span>70</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>119.76</span></td><td style='text-align:left;' ><span>16.298417101056167</span></td><td style='text-align:left;' ><span>64</span></td><td style='text-align:left;' ><span>174</span></td><td style='text-align:left;' ><span>110</span></td><td style='text-align:left;' ><span>120.0</span></td></tr><tr><td style='text-align:left;' ><span>70</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>160.788</span></td><td style='text-align:left;' ><span>18.949698045087686</span></td><td style='text-align:left;' ><span>82</span></td><td style='text-align:left;' ><span>218</span></td><td style='text-align:left;' ><span>136</span></td><td style='text-align:left;' ><span>160.0</span></td></tr><tr><td style='text-align:left;' ><span>70</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>198.688</span></td><td style='text-align:left;' ><span>20.84338398629167</span></td><td style='text-align:left;' ><span>122</span></td><td style='text-align:left;' ><span>260</span></td><td style='text-align:left;' ><span>138</span></td><td style='text-align:left;' ><span>200.0</span></td></tr><tr><td style='text-align:left;' ><span>75</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>50.444</span></td><td style='text-align:left;' ><span>8.844595185761754</span></td><td style='text-align:left;' ><span>18</span></td><td style='text-align:left;' ><span>78</span></td><td style='text-align:left;' ><span>60</span></td><td style='text-align:left;' ><span>50.0</span></td></tr><tr><td style='text-align:left;' ><span>75</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>100.264</span></td><td style='text-align:left;' ><span>12.152460820755605</span></td><td style='text-align:left;' ><span>62</span></td><td style='text-align:left;' ><span>142</span></td><td style='text-align:left;' ><span>80</span></td><td style='text-align:left;' ><span>100.0</span></td></tr><tr><td style='text-align:left;' ><span>75</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>150.452</span></td><td style='text-align:left;' ><span>14.83467883036232</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>198</span></td><td style='text-align:left;' ><span>98</span></td><td style='text-align:left;' ><span>150.0</span></td></tr><tr><td style='text-align:left;' ><span>75</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>199.61</span></td><td style='text-align:left;' ><span>17.6627262901286</span></td><td style='text-align:left;' ><span>140</span></td><td style='text-align:left;' ><span>260</span></td><td style='text-align:left;' ><span>120</span></td><td style='text-align:left;' ><span>200.0</span></td></tr><tr><td style='text-align:left;' ><span>75</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>250.086</span></td><td style='text-align:left;' ><span>19.150681554451264</span></td><td style='text-align:left;' ><span>184</span></td><td style='text-align:left;' ><span>312</span></td><td style='text-align:left;' ><span>128</span></td><td style='text-align:left;' ><span>250.0</span></td></tr><tr><td style='text-align:left;' ><span>80</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>59.384</span></td><td style='text-align:left;' ><span>8.222198246211288</span></td><td style='text-align:left;' ><span>32</span></td><td style='text-align:left;' ><span>84</span></td><td style='text-align:left;' ><span>52</span></td><td style='text-align:left;' ><span>60.0</span></td></tr><tr><td style='text-align:left;' ><span>80</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>120.75</span></td><td style='text-align:left;' ><span>11.19578045515363</span></td><td style='text-align:left;' ><span>72</span></td><td style='text-align:left;' ><span>150</span></td><td style='text-align:left;' ><span>78</span></td><td style='text-align:left;' ><span>120.0</span></td></tr><tr><td style='text-align:left;' ><span>80</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>180.432</span></td><td style='text-align:left;' ><span>13.811204726597893</span></td><td style='text-align:left;' ><span>136</span></td><td style='text-align:left;' ><span>220</span></td><td style='text-align:left;' ><span>84</span></td><td style='text-align:left;' ><span>180.0</span></td></tr><tr><td style='text-align:left;' ><span>80</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>240.186</span></td><td style='text-align:left;' ><span>16.128279635472595</span></td><td style='text-align:left;' ><span>196</span></td><td style='text-align:left;' ><span>304</span></td><td style='text-align:left;' ><span>108</span></td><td style='text-align:left;' ><span>240.0</span></td></tr><tr><td style='text-align:left;' ><span>80</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>299.786</span></td><td style='text-align:left;' ><span>17.18063456336814</span></td><td style='text-align:left;' ><span>238</span></td><td style='text-align:left;' ><span>352</span></td><td style='text-align:left;' ><span>114</span></td><td style='text-align:left;' ><span>300.0</span></td></tr><tr><td style='text-align:left;' ><span>85</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>69.932</span></td><td style='text-align:left;' ><span>7.181321326886857</span></td><td style='text-align:left;' ><span>42</span></td><td style='text-align:left;' ><span>92</span></td><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>70.0</span></td></tr><tr><td style='text-align:left;' ><span>85</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>140.024</span></td><td style='text-align:left;' ><span>10.235595927936975</span></td><td style='text-align:left;' ><span>108</span></td><td style='text-align:left;' ><span>170</span></td><td style='text-align:left;' ><span>62</span></td><td style='text-align:left;' ><span>140.0</span></td></tr><tr><td style='text-align:left;' ><span>85</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>210.034</span></td><td style='text-align:left;' ><span>12.304586299425104</span></td><td style='text-align:left;' ><span>168</span></td><td style='text-align:left;' ><span>244</span></td><td style='text-align:left;' ><span>76</span></td><td style='text-align:left;' ><span>210.0</span></td></tr><tr><td style='text-align:left;' ><span>85</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>279.598</span></td><td style='text-align:left;' ><span>13.699138513059864</span></td><td style='text-align:left;' ><span>234</span></td><td style='text-align:left;' ><span>322</span></td><td style='text-align:left;' ><span>88</span></td><td style='text-align:left;' ><span>280.0</span></td></tr><tr><td style='text-align:left;' ><span>85</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>349.452</span></td><td style='text-align:left;' ><span>15.635462768974891</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>392</span></td><td style='text-align:left;' ><span>92</span></td><td style='text-align:left;' ><span>350.0</span></td></tr><tr><td style='text-align:left;' ><span>90</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>79.926</span></td><td style='text-align:left;' ><span>6.359758171503064</span></td><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>98</span></td><td style='text-align:left;' ><span>48</span></td><td style='text-align:left;' ><span>80.0</span></td></tr><tr><td style='text-align:left;' ><span>90</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>159.754</span></td><td style='text-align:left;' ><span>8.82629503245841</span></td><td style='text-align:left;' ><span>128</span></td><td style='text-align:left;' ><span>184</span></td><td style='text-align:left;' ><span>56</span></td><td style='text-align:left;' ><span>160.0</span></td></tr><tr><td style='text-align:left;' ><span>90</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>239.546</span></td><td style='text-align:left;' ><span>10.765773729741863</span></td><td style='text-align:left;' ><span>198</span></td><td style='text-align:left;' ><span>268</span></td><td style='text-align:left;' ><span>70</span></td><td style='text-align:left;' ><span>240.0</span></td></tr><tr><td style='text-align:left;' ><span>90</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>319.914</span></td><td style='text-align:left;' ><span>11.942051917488888</span></td><td style='text-align:left;' ><span>274</span></td><td style='text-align:left;' ><span>354</span></td><td style='text-align:left;' ><span>80</span></td><td style='text-align:left;' ><span>320.0</span></td></tr><tr><td style='text-align:left;' ><span>90</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>400.614</span></td><td style='text-align:left;' ><span>13.807353258318555</span></td><td style='text-align:left;' ><span>356</span></td><td style='text-align:left;' ><span>440</span></td><td style='text-align:left;' ><span>84</span></td><td style='text-align:left;' ><span>400.0</span></td></tr><tr><td style='text-align:left;' ><span>95</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>90.132</span></td><td style='text-align:left;' ><span>4.386180114860766</span></td><td style='text-align:left;' ><span>72</span></td><td style='text-align:left;' ><span>100</span></td><td style='text-align:left;' ><span>28</span></td><td style='text-align:left;' ><span>90.0</span></td></tr><tr><td style='text-align:left;' ><span>95</span></td><td style='text-align:left;' ><span>200</span></td><td style='text-align:left;' ><span>180.126</span></td><td style='text-align:left;' ><span>6.13417671737618</span></td><td style='text-align:left;' ><span>158</span></td><td style='text-align:left;' ><span>196</span></td><td style='text-align:left;' ><span>38</span></td><td style='text-align:left;' ><span>180.0</span></td></tr><tr><td style='text-align:left;' ><span>95</span></td><td style='text-align:left;' ><span>300</span></td><td style='text-align:left;' ><span>269.978</span></td><td style='text-align:left;' ><span>7.801250925332424</span></td><td style='text-align:left;' ><span>240</span></td><td style='text-align:left;' ><span>290</span></td><td style='text-align:left;' ><span>50</span></td><td style='text-align:left;' ><span>270.0</span></td></tr><tr><td style='text-align:left;' ><span>95</span></td><td style='text-align:left;' ><span>400</span></td><td style='text-align:left;' ><span>360.024</span></td><td style='text-align:left;' ><span>8.860667243498089</span></td><td style='text-align:left;' ><span>330</span></td><td style='text-align:left;' ><span>386</span></td><td style='text-align:left;' ><span>56</span></td><td style='text-align:left;' ><span>360.0</span></td></tr><tr><td style='text-align:left;' ><span>95</span></td><td style='text-align:left;' ><span>500</span></td><td style='text-align:left;' ><span>450.37</span></td><td style='text-align:left;' ><span>9.46589140017991</span></td><td style='text-align:left;' ><span>418</span></td><td style='text-align:left;' ><span>482</span></td><td style='text-align:left;' ><span>64</span></td><td style='text-align:left;' ><span>450.0</span></td></tr></tbody></table></figure><h3 id='wyniki-poszczególnych-symulacji'><span>Wyniki poszczególnych symulacji</span></h3><p><span>Surowe wyniki każdej z symulacji dla danego eksperymentu</span></p><ul><li><p><span>id - liczba porządkowa</span></p></li></ul><ul><li><p><span>final - pozycja końcowa</span></p></li></ul><ul><li><p><span>steps - wykonane kroki gdzie </span><code>+</code><span> oznacza krok w górę a </span><code>-</code><span> oznacza krok w dół</span></p></li></ul><p><span>Przykład dla 50% prawdopodobieństwa oraz 100 kroków (pierwsze 11 wierszy pliku):</span></p><figure class='table-figure'><table><thead><tr><th style='text-align:left;' ><span>id</span></th><th style='text-align:left;' ><span>final</span></th><th style='text-align:left;' ><span>steps</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>0</span></td><td style='text-align:left;' ><span>6</span></td><td style='text-align:left;' ><span>---++-+-++-------+-+++-++-++-+-+-+++-+++-----+-++-+--++---+--+-+++-++---+++--+++-+--++-++-++-+++-+++</span></td></tr><tr><td style='text-align:left;' ><span>1</span></td><td style='text-align:left;' ><span>10</span></td><td style='text-align:left;' ><span>+-++-++----++--+++-+--++++--+----++---+--++--+++++-++-++-+++++--+-++-++---++--+-+-++++-+--++-++-+--+</span></td></tr><tr><td style='text-align:left;' ><span>2</span></td><td style='text-align:left;' ><span>6</span></td><td style='text-align:left;' ><span>+--++--+++-+---+++---+-++-++-+++++-+---++---++++-+-++--++--+++++-+-++----+-+---++-+---+--+++--+-+-++</span></td></tr><tr><td style='text-align:left;' ><span>3</span></td><td style='text-align:left;' ><span>0</span></td><td style='text-align:left;' ><span>--+-+----+-+--++++--+++--+---+++---+-+++-++--+++--++--++++-+---++-++--+-+---+-++-+-+++-----+++-++-+-</span></td></tr><tr><td style='text-align:left;' ><span>4</span></td><td style='text-align:left;' ><span>-16</span></td><td style='text-align:left;' ><span>+------+++----++-+--+--++----+--++++---+-+---+++-----+---+--++--+++--++-++-++---+------+++-+--++++--</span></td></tr><tr><td style='text-align:left;' ><span>5</span></td><td style='text-align:left;' ><span>-4</span></td><td style='text-align:left;' ><span>--+----+++-+--+--+++--+-+++--+-+-+-+++-+-++--+++----------+-+-+--+-+++++------++-+++-++++++-++--+---</span></td></tr><tr><td style='text-align:left;' ><span>6</span></td><td style='text-align:left;' ><span>-6</span></td><td style='text-align:left;' ><span>+--+---++-----+++-++-++-++++-++-----+---+++++-----++++-----+--++++-+---++-++++--++-+-----+---+-+--++</span></td></tr><tr><td style='text-align:left;' ><span>7</span></td><td style='text-align:left;' ><span>30</span></td><td style='text-align:left;' ><span>-+---+---+++++++---+-+---++-+++-++-++++--++++++-++-++--++++++-+-+++++++++-++-+----+--+++++-+-+++++++</span></td></tr><tr><td style='text-align:left;' ><span>8</span></td><td style='text-align:left;' ><span>-16</span></td><td style='text-align:left;' ><span>++-+-----+--++-+---+---+----+--++----+-++-+-+--++++---+++++-------+-+-+--+-+-+--+-++---+--+--++--+++</span></td></tr><tr><td style='text-align:left;' ><span>9</span></td><td style='text-align:left;' ><span>-4</span></td><td style='text-align:left;' ><span>+--++-++-+-+++-+--++--++--+++--+++----+--+-+-----+++----+---+++-+---+-++---+++++--++-+-+-+--++----++</span></td></tr></tbody></table></figure><h2 id='przedstawić-wyniki-na-wykresach'><span>Przedstawić wyniki na wykresach:</span></h2><h3 id='średnia-pozycja-cząsteczki-po-k-krokach-z-uwzględnieniem-95-przedziału-ufności'><span>Średnia pozycja cząsteczki po K krokach z uwzględnieniem 95% przedziału ufności</span></h3><h4 id='przykładowe-wykresy'><span>Przykładowe wykresy:</span></h4><ul><li><p><span>dla 50% prawdopodobieństwa oraz 200 kroków:</span></p></li></ul><p><img src="./charts/mean/mean_95_percent_confidence_interval_50_200.png" referrerpolicy="no-referrer"></p><ul><li><p><span>dla 55% prawdopodobieństwa oraz 100 kroków: </span></p></li></ul><p><img src="./charts/mean/mean_95_percent_confidence_interval_55_100.png" referrerpolicy="no-referrer"></p><p><span>Średnia pozycja po K krokach oscyluje wokół wartości oczekiwanej po K krokach. Wraz ze wzrostem </span><code>p</code><span> zmniejsza się przedział nieufności </span></p><h3 id='histogram-pozycji-końcowych-dla-różnych-wartości-p'><span>Histogram pozycji końcowych dla różnych wartości p.</span></h3><h4 id='przykładowe-wykresy-2'><span>Przykładowe wykresy:</span></h4><ul><li><p><span>dla 50% prawdopodobieństwa oraz 300 kroków:</span></p></li></ul><p><img src="./charts/histograms/histogram_50_300.png" referrerpolicy="no-referrer"></p><ul><li><p><span>dla 75% prawdopodobieństwa oraz 500 kroków:</span></p></li></ul><p><img src="./charts/histograms/histogram_75_500.png" referrerpolicy="no-referrer"></p><ul><li><p><span>dla 95% prawdopodobieństwa oraz 500 kroków:</span></p></li></ul><p><img src="./charts/histograms/histogram_95_500.png" referrerpolicy="no-referrer"></p><p><span>Przy wzrastającej liczbie powtórzeń rozkłady pozycji końcowych coraz bardziej przypominają rozkład normalny</span></p><h3 id='przykładowe-trajektorie-wędrówki'><span>Przykładowe trajektorie wędrówki.</span></h3><h4 id='przykładowe-wykresy-po-10-losowych-dla-każdej-wartości-p-oraz-n-na-wykresie-zbiorczym-oraz-indywidualnym'><span>Przykładowe wykresy (po 10 losowych dla każdej wartości p oraz N na wykresie zbiorczym, oraz indywidualnym):</span></h4><ul><li><p><span>dla 50% prawdopodobieństwa oraz 300 kroków:</span></p></li></ul><p><img src="./charts/trajectories/trajectories_summary_50_300.png" referrerpolicy="no-referrer"></p><p><img src="./charts/trajectories/trajectories_random_50_300.png" referrerpolicy="no-referrer"></p><ul><li><p><span>dla 60% prawdopodobieństwa oraz 100 kroków:</span></p></li></ul><p><img src="./charts/trajectories/trajectories_summary_60_100.png" referrerpolicy="no-referrer"></p><p><img src="./charts/trajectories/trajectories_random_60_100.png" referrerpolicy="no-referrer"></p><ul><li><p><span>dla 90% prawdopodobieństwa oraz 500 kroków:</span></p></li></ul><p><img src="./charts/trajectories/trajectories_summary_90_500.png" referrerpolicy="no-referrer"></p><p><img src="./charts/trajectories/trajectories_random_90_500.png" referrerpolicy="no-referrer"></p><p><span>Wykresy przedstawiają przykładowe trajektorie oraz pozycje końcowe. </span></p><h3 id='skomentować-wpływ-parametrów-p-oraz-n'><span>Skomentować wpływ parametrów p oraz N:</span></h3><h4 id='jak-zmienia-się-średnia-pozycja-oraz-rozkład-pozycji-końcowych-dla-różnych-wartości-p'><span>Jak zmienia się średnia pozycja oraz rozkład pozycji końcowych dla różnych wartości p?</span></h4><p><span>Wraz ze wzrostem wartości p, średnia pozycja cząsteczki rośnie, a rozkład pozycji końcowych staje się bardziej skupiony wokół wartości oczekiwanej.</span></p><p><img src="./charts/max_minus_min_by_probability.png" referrerpolicy="no-referrer"></p><p><img src="./charts/mean_final_position_by_probability.png" referrerpolicy="no-referrer"></p><h4 id='jak-liczba-kroków-n-wpływa-na-rozrzut-wyników-rozpiętość-końcowych-pozycji'><span>Jak liczba kroków N wpływa na rozrzut wyników (rozpiętość końcowych pozycji)?</span></h4><p><span>Wraz ze wzrostem liczby kroków N, rozpiętość końcowych pozycji rośnie. Średnia pozycja końcowa zbliża się do wartości oczekiwanej.</span></p><p><img src="./charts/max_minus_min_by_number_of_steps.png" referrerpolicy="no-referrer"></p><p><img src="./charts/mean_final_position_by_number_of_steps.png" referrerpolicy="no-referrer"></p><p>&nbsp;</p></div></div>
+</body>
+</html>
